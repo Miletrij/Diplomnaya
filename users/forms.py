@@ -8,7 +8,7 @@ from users.models import User
 class UserRegisterForm(StyleFormMixin, UserCreationForm):
     class Meta:
         model = User
-        fields = ("phone", "phone_code")
+        fields = ("phone", "password")
 
 
 class ProfileForm(StyleFormMixin, UserChangeForm):
@@ -24,4 +24,4 @@ class ProfileForm(StyleFormMixin, UserChangeForm):
 class UserLoginForm(StyleFormMixin, AuthenticationForm):
     class Meta:
         model = User
-        fields = ("phone", "phone_code")
+        fields = ("phone", "password")
